@@ -1,9 +1,13 @@
-import Navigation from "./navigation/Navigation";
+import About from './about/About';
+import HeroSection from './hero/HeroSection';
+import Navigation from './navigation/Navigation';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-900">
+    <div className="flex flex-col items-center">
       <Navigation />
+      <HeroSection />
+      <About />
     </div>
   );
 }
