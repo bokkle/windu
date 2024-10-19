@@ -13,21 +13,17 @@ const Buy = () => {
         <Heading primary="buy" />
         <div className="mt-6 grid md:grid-cols-2">
           <div className="rounded-xl bg-gradient-to-b from-cyan-400 to-purple-500 p-1">
-            <div className="grid h-full grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-4 rounded-lg bg-slate-800 p-6">
+            <div className="grid h-full grid-cols-2 gap-4 rounded-lg bg-slate-800 p-6 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3">
               {buyButtons.map((element, i) => (
-                <div
+                <button
                   key={i}
-                  className={`flex justify-center flex-col rounded-lg border border-slate-700 ${i > 3 && 'col-span-2'}`}
+                  className={`flex flex-col justify-center rounded-lg border border-slate-700 ${i > 3 && 'col-span-2'}`}
                 >
-                  <img
-                    src={element.img}
-                    className="w-full"
-                    alt={element.alt}
-                  />
-                  <span className="mx-auto text-sm capitalize text-slate-100 md:text-lg mb-2">
+                  <img src={element.img} className="w-full" alt={element.alt} />
+                  <span className="mx-auto mb-2 text-sm capitalize text-slate-100 md:text-lg">
                     {element.title}
                   </span>
-                </div>
+                </button>
               ))}
               {/* <div className="rounded-lg border border-purple-500">
                 <img src={pumpfun} alt="" />
