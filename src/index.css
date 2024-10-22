@@ -6,11 +6,33 @@
 
 /* Headline text shadow  */
 .headlineGlow {
-    text-shadow: 0 0 20px #954edc ;
+  text-shadow: 0 0 20px #954edc;
 }
 
 /* conic gradient  */
 
 .conicGradient {
-    background: conic-gradient(red, yellow, green, blue, red)
+  background: conic-gradient(red, yellow, green, blue, red);
 }
+
+/* custom button  */
+
+/* .g7 {
+  background: linear-gradient(#1b275a, #0e1434);
+}
+
+.g8 {
+  background: linear-gradient(to right, transparent, #2ef2ff, transparent);
+}
+
+.inner-before {
+  @apply before:g7 before:absolute before:inset-0 before:opacity-0 before:transition-opacity before:duration-500 before:content-[''];
+}
+
+.glow-before {
+  @apply before:g8 before:left-2/5 before:z-4 before:absolute before:top-0 before:h-0.5 before:w-3/5 before:opacity-0 before:transition-all before:duration-500 before:content-[''] group-hover:before:left-4 group-hover:before:opacity-40;
+}
+
+.glow-after {
+  @apply after:g8 after:z-4 after:w-7/20 group-hover:after:left-3/5 after:absolute after:bottom-0 after:left-4 after:h-0.5 after:opacity-0 after:transition-all after:duration-500 after:content-[''] group-hover:after:opacity-40;
+} */

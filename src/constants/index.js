@@ -1,3 +1,23 @@
+// nav
+const navLinks = [
+  {
+    title: 'about',
+    href: '#about',
+  },
+  {
+    title: 'roadmap',
+    href: '#roadmap',
+  },
+  {
+    title: 'buy',
+    href: '#buy',
+  },
+  {
+    title: 'memes',
+    href: '#memes',
+  },
+];
+
 //about
 import nod from '../assets/winduNod.gif';
 import chin from '../assets/winduChin.gif';
@@ -13,6 +33,12 @@ import raydium from '../assets/raydium.svg';
 import pumpfun from '../assets/pumpfun.svg';
 import dexscreener from '../assets/dexscreener.svg';
 
+//memes
+import weWuzJedi from '../assets/weWuzJedi.png';
+import coruscant from '../assets/coruscant.png';
+import aroundWindus from '../assets/aroundWindus.png';
+import winduNuffin from '../assets/winduNuffin.png';
+
 const aboutInfo = [
   {
     title: 'fair launch',
@@ -27,8 +53,8 @@ const aboutInfo = [
     alt: 'windu contemplating',
   },
   {
-    title: 'contract address',
-    description: '01010101010101010',
+    title: 'no mint or freeze',
+    description: 'jeets banned',
     img: eyeroll,
     alt: 'windu rolling eyes',
   },
@@ -101,4 +127,23 @@ const buyButtons = [
   },
 ];
 
-export { aboutInfo, timeline, buyButtons };
+const memePics = [
+  {
+    img: winduNuffin,
+    alt: 'windu nuffin',
+  },
+  {
+    img: weWuzJedi,
+    alt: 'we wuz jedi',
+  },
+  {
+    img: coruscant,
+    alt: 'coruscant',
+  },
+  {
+    img: aroundWindus,
+    alt: 'never relax!',
+  },
+];
+
+export { navLinks, aboutInfo, timeline, buyButtons, memePics };
