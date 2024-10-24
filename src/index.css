@@ -8,35 +8,60 @@
   scroll-behavior: smooth;
 }
 
+::selection {
+  background-color: #954edc; /* Highlight background color */
+  color: #ffffff; /* Text color */
+}
+
 /* Headline text shadow  */
 .headlineGlow {
   text-shadow: 0 0 20px #954edc;
 }
 
-/* conic gradient  */
-
-.conicGradient {
-  background: conic-gradient(red, yellow, green, blue, red);
+/* starfield  */
+.starfield {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(2 6 23);
 }
 
-/* custom button  */
-
-/* .g7 {
-  background: linear-gradient(#1b275a, #0e1434);
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
 }
 
-.g8 {
-  background: linear-gradient(to right, transparent, #2ef2ff, transparent);
+.animate-pulse {
+  animation: pulse 2s infinite;
 }
 
-.inner-before {
-  @apply before:g7 before:absolute before:inset-0 before:opacity-0 before:transition-opacity before:duration-500 before:content-[''];
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
-.glow-before {
-  @apply before:g8 before:left-2/5 before:z-4 before:absolute before:top-0 before:h-0.5 before:w-3/5 before:opacity-0 before:transition-all before:duration-500 before:content-[''] group-hover:before:left-4 group-hover:before:opacity-40;
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  box-shadow: 0 0 20px 10px white;
 }
 
-.glow-after {
-  @apply after:g8 after:z-4 after:w-7/20 group-hover:after:left-3/5 after:absolute after:bottom-0 after:left-4 after:h-0.5 after:opacity-0 after:transition-all after:duration-500 after:content-[''] group-hover:after:opacity-40;
-} */
+@keyframes shooting-star-trail {
+  from {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(500px, 500px); /* Longer diagonal streak */
+    opacity: 0; /* Fade out effect */
+  }
+}

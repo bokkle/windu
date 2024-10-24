@@ -6,14 +6,16 @@ import AboutCard from './AboutCard';
 import Heading from '../../ui/Heading';
 import Subheading from '../../ui/Subheading';
 import { PiCopyLight, PiCheckLight } from 'react-icons/pi';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import Button from '../../ui/Button';
+import LoadModel from '../../ui/LoadModel';
+import { ca } from '../../constants';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
   const handleCopy = () => {
-    const address = 'GFRsYwgJMoKDYZngNqy1uV4CFxcPnJgS4fh9KEVgpump';
+    const address = ca;
     navigator.clipboard.writeText(address);
     setHasCopied(true);
 
@@ -23,7 +25,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="px-4 py-20 md:px-6 lg:px-8 lg:py-28">
+    <section id="about" className="px-4 py-20 md:px-6 lg:px-8 lg:py-28 bg-gradient-to-b from-slate-950 to-slate-900">
       <div className="mx-auto w-full max-w-7xl">
         <Heading primary="about" />
         <Subheading>
@@ -44,11 +46,17 @@ const About = () => {
           </div>
           <div className="hidden cursor-grab lg:col-span-1 lg:flex">
             <Canvas>
-              <ambientLight intensity={4} />
-              <directionalLight position={[0, 0, 10]} intensity={1} />
-              <Windu />
-              <OrbitControls enablePan={false} enableZoom={false} />
-              <PerspectiveCamera makeDefault position={[-7, 3, 0]} />
+              <Suspense fallback={<LoadModel />}>
+                <ambientLight intensity={4} />
+                <directionalLight position={[0, 0, 10]} intensity={1} />
+                <Windu />
+                <OrbitControls
+                  enablePan={false}
+                  autoRotate
+                  enableZoom={false}
+                />
+                <PerspectiveCamera makeDefault position={[-7, 3, 0]} />
+              </Suspense>
             </Canvas>
           </div>
           <div className="grid gap-4 sm:col-span-2 sm:grid-cols-2 lg:col-span-1 lg:grid-cols-1">
@@ -79,7 +87,7 @@ const About = () => {
               <PiCheckLight className="text-3xl text-emerald-400 sm:text-4xl md:text-5xl lg:text-6xl" />
             )}
             <span className="duration0-500 text-xs font-thin text-slate-100 transition-colors ease-out group-hover:text-purple-400 sm:text-base sm:font-medium md:text-lg lg:text-xl xl:text-3xl">
-              GFRsYwgJMoKDYZngNqy1uV4CFxcPnJgS4fh9KEVgpump
+              {ca}
             </span>
           </button>
         </div>

@@ -5,12 +5,14 @@ import { buyButtons } from '../../constants';
 import { PiCopyLight, PiCheckLight } from 'react-icons/pi';
 import { useState } from 'react';
 import Subheading from '../../ui/Subheading';
+import Meteors from '../../ui/Meteors';
+import { ca } from '../../constants';
 
 const Buy = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
   const handleCopy = () => {
-    const address = 'GFRsYwgJMoKDYZngNqy1uV4CFxcPnJgS4fh9KEVgpump';
+    const address = ca;
     navigator.clipboard.writeText(address);
     setHasCopied(true);
 
@@ -30,10 +32,19 @@ const Buy = () => {
               {buyButtons.map((element, i) => (
                 <button
                   key={i}
-                  className={`flex select-none flex-col justify-center rounded-lg border border-slate-700 ${i > 3 && 'col-span-2'}`}
+                  className={`flex min-h-28 select-none flex-col justify-center overflow-hidden rounded-lg border border-slate-700 transition-colors duration-500 ease-out hover:border-purple-500 ${i > 3 && 'col-span-2'} ${i === 4 && 'bg-slate-950'} group relative`}
                 >
-                  <img src={element.img} className="w-full" alt={element.alt} />
-                  <span className="mx-auto mb-2 text-sm capitalize text-slate-100 md:text-lg">
+                  {i === 4 && <Meteors />}
+                  {i < 4 && (
+                    <img
+                      src={element.img}
+                      className="w-full"
+                      alt={element.alt}
+                    />
+                  )}
+                  <span
+                    className={`mx-auto text-sm capitalize text-slate-100 md:text-lg ${i === 4 && 'font-mono !text-2xl font-semibold sm:!text-3xl'} transition-colors duration-500 ease-out group-hover:text-purple-500`}
+                  >
                     {element.title}
                   </span>
                 </button>
@@ -52,12 +63,12 @@ const Buy = () => {
                   Copy Contract Address
                 </span>
                 <span className="hidden font-thin text-slate-100 transition-colors duration-500 ease-out group-hover:text-purple-400 sm:block md:hidden lg:block xl:text-lg">
-                  GFRsYwgJMoKDYZngNqy1uV4CFxcPnJgS4fh9KEVgpump
+                  {ca}
                 </span>
               </div>
             </div>
           </div>
-          <div className="mt-6 flex items-center justify-center md:mt-0">
+          <div className="mt-6 flex items-center justify-center md:mt-0 ">
             <img
               src={winduGif}
               className="select-none"

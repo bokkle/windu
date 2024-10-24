@@ -1,6 +1,7 @@
 import logo from '../../assets/winduLogo.png';
 import { FaSquareXTwitter } from 'react-icons/fa6';
 import { FaTelegram } from 'react-icons/fa6';
+import { ca } from '../../constants';
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
           windu nuffin
         </span>
         <span className="text-center text-xs font-thin text-slate-100 sm:text-lg lg:text-xl">
-          GFRsYwgJMoKDYZngNqy1uV4CFxcPnJgS4fh9KEVgpump
+          {ca}
         </span>
         <div className="flex justify-center gap-6">
           <FaSquareXTwitter className="text-5xl text-slate-400 transition-colors duration-500 ease-out hover:text-slate-100" />

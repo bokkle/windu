@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { navLinks } from '../../constants';
 import { RiMenu3Fill, RiCloseFill } from 'react-icons/ri';
+import GradientDivider from '../../ui/GradientDivider';
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,6 +51,7 @@ const Nav = () => {
           ))}
         </ul>
       </nav>
+      <GradientDivider />
     </header>
   );
 };

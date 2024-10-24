@@ -1,23 +1,3 @@
-// nav
-const navLinks = [
-  {
-    title: 'about',
-    href: '#about',
-  },
-  {
-    title: 'roadmap',
-    href: '#roadmap',
-  },
-  {
-    title: 'buy',
-    href: '#buy',
-  },
-  {
-    title: 'memes',
-    href: '#memes',
-  },
-];
-
 //about
 import nod from '../assets/winduNod.gif';
 import chin from '../assets/winduChin.gif';
@@ -38,6 +18,27 @@ import weWuzJedi from '../assets/weWuzJedi.png';
 import coruscant from '../assets/coruscant.png';
 import aroundWindus from '../assets/aroundWindus.png';
 import winduNuffin from '../assets/winduNuffin.png';
+
+const ca = 'KEKsYwgJMoKDYZngNqy1uV4CFxcPnJgS4fh9KEVgpump';
+
+const navLinks = [
+  {
+    title: 'about',
+    href: '#about',
+  },
+  {
+    title: 'roadmap',
+    href: '#roadmap',
+  },
+  {
+    title: 'buy',
+    href: '#buy',
+  },
+  {
+    title: 'memes',
+    href: '#memes',
+  },
+];
 
 const aboutInfo = [
   {
@@ -146,4 +147,4 @@ const memePics = [
   },
 ];
 
-export { navLinks, aboutInfo, timeline, buyButtons, memePics };
+export { navLinks, aboutInfo, timeline, buyButtons, memePics, ca };
