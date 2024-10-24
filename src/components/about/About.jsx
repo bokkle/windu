@@ -23,7 +23,7 @@ const About = () => {
   };
 
   return (
-    <section className="px-4 py-20 md:px-6 lg:px-8 lg:py-28">
+    <section id="about" className="px-4 py-20 md:px-6 lg:px-8 lg:py-28">
       <div className="mx-auto w-full max-w-7xl">
         <Heading primary="about" />
         <Subheading>
@@ -64,7 +64,7 @@ const About = () => {
           </div>
         </div>
         <hr className="my-12 border-slate-700" />
-        <div className="flex flex-col items-center justify-center gap-4 md:flex-row select-none">
+        <div className="flex select-none flex-col items-center justify-center gap-4 md:flex-row">
           <Button>twitter</Button>
           <Button>telegram</Button>
         </div>

@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 /* Headline text shadow  */
 .headlineGlow {
   text-shadow: 0 0 20px #954edc;
